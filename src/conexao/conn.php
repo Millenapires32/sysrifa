@@ -3,7 +3,7 @@
 //Carregar as credenciais do banco de bados 
 $hostname = "sql109.epizy.com";
 $database = "epiz_31629778_sysrifa";
-$user ="	epiz_31629778";
+$user = "epiz_31629778";
 $passaword = "k1xhKt3Yuyy9hI";
 
 try{
