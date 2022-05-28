@@ -7,6 +7,15 @@ $(document).ready(function(){
        $('.modal-body').empty()
 
        //Incluir nonos textos no cabeçalho da minha janela modal
-       $('.modal-title').append('')
+       $('.modal-title').append('Adicionar novo registro')
+
+       //Incluir o nosso formulario dentro da nossa janela modal
+       $('.modal-body').load('scr/tipo/visao/form-tipo.html')
+
+       //Iremos incluir uma função no botão salvar para demonstrar que é um novo registro
+       $('.btn-salvar').attr('data-operation', 'insert')
+
+       //Abrir nossa janela modal
+       $('#modal-tipo').modal('show')
     })
 })
