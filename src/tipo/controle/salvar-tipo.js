@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('.btn-salvar').click(function(e){
-        e.preventDefaut()
+        e.preventDefault()
 
     let dados = $('#form-tipo').serialize()
 
@@ -11,8 +11,8 @@ $(document).ready(function(){
         dataType: 'JSON',
         assync: true,
         data: dados,
-        url: 'scr/tipo/modelo/salvar-tipo.php',
-        sucess: function(dados){
+        url: 'src/tipo/modelo/salvar-tipo.php',
+        success: function(dados){
             Swal.fire({
                 title: 'SysRifa',
                 text: dados.mensagem,
