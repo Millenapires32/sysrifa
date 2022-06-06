@@ -44,7 +44,7 @@
                     ':a' => utf8_decode($requestData['NOME'])
                 ));
                 $dados = array(
-                    "Tipo" => 'sucess', 
+                    "Tipo" => 'success', 
                     "mensagem" => 'Registro atualizado com sucesso!' 
                 ); 
             } catch(PDOException $e) {

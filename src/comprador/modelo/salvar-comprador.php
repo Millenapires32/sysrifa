@@ -23,11 +23,11 @@
             try{
                 $stmt = $pdo->('INSERT INTO TIPO (NOME, CELULAR) VALUES (:a, :b)');
                 $stmt->execute(array(
-                    ':a' => utf8_decode($requestData['NOME'])
+                    ':a' => utf8_decode($requestData['NOME']),
                     ':b' => utf8_decode($requestData['CELULAR'])
                 ));
                 $dados = array(
-                    "Tipo" => 'sucess', 
+                    "Tipo" => 'success', 
                     "mensagem" => 'Registro salvo com sucesso!' 
                 ); 
             } catch(PDOException $e) {
@@ -42,7 +42,7 @@
                 $stmt = $pdo->('UPDATE TIPO SET NOME = :a, CELULAR = :b WHERE ID = :id');
                 $stmt->execute(array(
                     ':id' => $ID,
-                    ':a' => utf8_decode($requestData['NOME'])
+                    ':a' => utf8_decode($requestData['NOME']),
                     ':b' => utf8_decode($requestData['CELULAR'])
                 ));
                 $dados = array(
