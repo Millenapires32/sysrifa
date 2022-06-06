@@ -16,6 +16,6 @@ $(document).ready(function(){
        $('.btn-salvar').attr('data-operation', 'insert')
 
        //Abrir nossa janela modal
-       $('#modal-comprador').modal('show')
+       $('#modal-tipo').modal('show')
     })
 })

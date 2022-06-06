@@ -21,9 +21,10 @@
         if($operacao == 'insert'){
             //Comandos para o INSERT no banco de dados se ocorerem
             try{
-                $stmt = $pdo->('INSERT INTO TIPO (NOME) VALUES (:a)');
+                $stmt = $pdo->('INSERT INTO TIPO (NOME, CELULAR) VALUES (:a, :b)');
                 $stmt->execute(array(
                     ':a' => utf8_decode($requestData['NOME'])
+                    ':b' => utf8_decode($requestData['CELULAR'])
                 ));
                 $dados = array(
                     "Tipo" => 'sucess', 
@@ -38,10 +39,11 @@
         } else {
             //Se a nossa operação vir vazia, então iremos realizar UPDATE
             try{
-                $stmt = $pdo->('UPDATE TIPO SET NOME = :a WHERE ID = :id');
+                $stmt = $pdo->('UPDATE TIPO SET NOME = :a, CELULAR = :b WHERE ID = :id');
                 $stmt->execute(array(
                     ':id' => $ID,
                     ':a' => utf8_decode($requestData['NOME'])
+                    ':b' => utf8_decode($requestData['CELULAR'])
                 ));
                 $dados = array(
                     "Tipo" => 'sucess', 
