@@ -7,7 +7,7 @@ include("../../conexao/conn.php");
 $requestData = $_REQUEST;
 
 //Obter as colunas que estão sendo requiridas 
-$colunas = $requestData['colunas'];
+$colunas = $requestData['columns'];
 
 //Preparar o comando sql para obter dos registros existentes no banco de dados
 $sql = "SELECT ID, NOME FROM TIPO WHERE 1=1 ";
