@@ -1,7 +1,7 @@
 <?php
 
 //Incluindo nossa conexão com o banco de dados 
-include('../../src/conexao/conn.php');
+include('../../conexao/conn.php');
 
 //Recepção do id do banco de dados 
 $ID = $_REQUEST['ID'];
@@ -31,4 +31,4 @@ if($resultado){
         'dados' => array();
     );
 }
-echo jason_encode($dados);
+echo json_encode($dados);
