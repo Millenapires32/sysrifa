@@ -28,7 +28,7 @@ if($resultado){
     $dados = array(
         'tipo'=> 'error',
         'mensagem' => 'Não foi possivel obter o registro solicitado',
-        'dados' => array();
+        'dados' => array()
     );
 }
 echo json_encode($dados);
