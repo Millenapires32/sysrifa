@@ -27,9 +27,10 @@ $(document).ready(function(){
                             icon: dados.tipo,
                             confirmButtonText: 'OK'
                         })
+                        $('#table-tipo').DataTable().ajax.reload()
                     }
-                    }
-        )}
-            }
-    )}
-        })
+                })
+     }
+})
+})
+})

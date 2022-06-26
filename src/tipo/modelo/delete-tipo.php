@@ -1,11 +1,11 @@
 <?php
 
 //Incluindo nossa conexão com o banco de dados 
-include('../../src/conexao/conn.php');
+include('../../conexao/conn.php');
 
 $ID = $_REQUEST['ID'];
 
-$sql = "DELETE * FROM TIPO WHERE ID = $ID";
+$sql = "DELETE FROM TIPO WHERE ID = $ID";
 
 $resultado = $pdo->query($sql);
 
